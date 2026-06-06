@@ -84,7 +84,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 60px;
-            height: 520px;
+            height: 480px;
             position: relative;
         }
         .hero-text-block { max-width: 520px; }
@@ -116,9 +116,7 @@
             font-size: 0.82rem;
             display: inline-block;
             letter-spacing: 0.5px;
-            transition: background 0.2s;
         }
-        .hero-primary-cta:hover { background-color: #0b5a53; }
         .hero-display-graphic {
             width: 45%;
             height: 100%;
@@ -136,9 +134,8 @@
             border-bottom: 1px solid #eae8e2;
         }
         .prop-item-box { display: flex; align-items: center; gap: 10px; font-size: 0.78rem; }
-        .prop-item-box h4 { color: #111; font-weight: 600; margin-bottom: 1px; }
+        .prop-item-box h4 { color: #111; font-weight: 600; }
         .prop-item-box p { color: #666; }
-        .prop-glyph-icon { font-size: 1.3rem; color: #0b5a53; }
 
         /* Dynamic Section Headings */
         .generic-section-title {
@@ -148,30 +145,6 @@
         }
         .generic-section-title h2 { font-size: 1.65rem; color: #111; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
         .generic-section-title::after { content: "❖"; display: block; color: #0b5a53; margin-top: 6px; font-size: 0.65rem; }
-
-        /* Explore Our Collection (Circular Grid Layout) */
-        .round-categories-panel {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto 55px;
-            padding: 0 20px;
-        }
-        .category-circular-card { text-align: center; cursor: pointer; }
-        .avatar-circle-frame {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            background-size: cover;
-            background-position: center;
-            border: 1px solid #eaeaea;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        }
-        .category-circular-card:hover .avatar-circle-frame { transform: scale(1.05); }
-        .category-circular-card h3 { font-size: 0.9rem; font-weight: 600; color: #222; text-transform: uppercase; letter-spacing: 0.5px; }
 
         /* Core Products Grid Matrix Layout */
         .showcase-products-matrix {
@@ -198,8 +171,7 @@
             background-position: center top;
         }
         .floating-tag-new { position: absolute; top: 12px; left: 12px; background: #0b5a53; color: white; padding: 3px 9px; font-size: 0.62rem; font-weight: bold; text-transform: uppercase; border-radius: 2px; }
-        .floating-wishlist-heart { position: absolute; top: 12px; right: 12px; background: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06); cursor: pointer; font-size: 0.9rem; color: #777; transition: color 0.2s; }
-        .floating-wishlist-heart:hover { color: red; }
+        .floating-wishlist-heart { position: absolute; top: 12px; right: 12px; background: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06); cursor: pointer; font-size: 0.9rem; color: #777; }
         
         .retail-product-meta { padding: 18px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .product-item-title { font-size: 0.9rem; color: #333; font-weight: 500; margin-bottom: 6px; }
@@ -222,22 +194,22 @@
             border: none;
             cursor: pointer;
             border-radius: 2px;
-            transition: opacity 0.2s;
         }
-        .action-button:hover { opacity: 0.9; }
         .btn-cart-secondary { background-color: #3b5249; color: white; }
         .btn-buy-primary { background-color: #ff9900; color: white; }
 
-        .center-action-wrapper { text-align: center; margin-bottom: 55px; }
+        /* LOAD MORE SYSTEM BUTTON */
+        .center-action-wrapper { text-align: center; margin: 40px 0 70px; }
         .btn-load-more-collections {
             border: 1px solid #3b5249;
             color: #3b5249;
-            padding: 11px 28px;
-            text-decoration: none;
+            padding: 12px 35px;
+            background: transparent;
             font-weight: bold;
-            font-size: 0.78rem;
-            display: inline-block;
+            font-size: 0.85rem;
+            cursor: pointer;
             transition: all 0.2s;
+            border-radius: 4px;
         }
         .btn-load-more-collections:hover { background: #3b5249; color: white; }
 
@@ -254,52 +226,23 @@
             padding: 20px; background: #0b5a53; color: white;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .cart-drawer-header h3 { font-size: 1.1rem; }
         .close-drawer-btn { font-size: 1.6rem; cursor: pointer; color: white; }
         
-        .cart-drawer-body {
-            padding: 15px; flex-grow: 1; overflow-y: auto;
-            display: flex; flex-direction: column; gap: 15px;
-        }
-        .empty-cart-message {
-            text-align: center; color: #777; margin-top: 40px; font-size: 0.9rem;
-        }
+        .cart-drawer-body { padding: 15px; flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+        .empty-cart-message { text-align: center; color: #777; margin-top: 40px; font-size: 0.9rem; }
         
-        /* Drawer Single Product Item Structure Styling */
-        .cart-item-row {
-            display: flex; gap: 12px; padding-bottom: 12px;
-            border-bottom: 1px solid #eee; align-items: center;
-        }
-        .cart-item-img {
-            width: 55px; height: 70px; background-size: cover;
-            background-position: center; border-radius: 2px;
-        }
+        .cart-item-row { display: flex; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; align-items: center; }
+        .cart-item-img { width: 55px; height: 70px; background-size: cover; background-position: center; border-radius: 2px; }
         .cart-item-details { flex-grow: 1; }
         .cart-item-title { font-size: 0.85rem; font-weight: 600; color: #333; margin-bottom: 3px; }
         .cart-item-price { font-size: 0.85rem; color: #0b5a53; font-weight: 700; }
-        .cart-item-qty-controls {
-            display: flex; align-items: center; gap: 8px; margin-top: 5px;
-        }
-        .qty-adjust-btn {
-            background: #eee; border: none; width: 22px; height: 22px;
-            font-weight: bold; cursor: pointer; font-size: 0.8rem; border-radius: 2px;
-        }
-        .qty-display-num { font-size: 0.85rem; font-weight: 600; }
-        .remove-item-cross { color: #cc0000; font-size: 0.75rem; cursor: pointer; margin-left: auto; border-bottom: 1px solid transparent; }
-        .remove-item-cross:hover { border-bottom-color: #cc0000; }
+        .cart-item-qty-controls { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+        .qty-adjust-btn { background: #eee; border: none; width: 22px; height: 22px; font-weight: bold; cursor: pointer; }
+        .remove-item-cross { color: #cc0000; font-size: 0.75rem; cursor: pointer; margin-left: auto; }
 
-        .cart-drawer-footer {
-            padding: 20px; border-top: 1px solid #eee; background: #fafafa;
-        }
-        .cart-summary-total-row {
-            display: flex; justify-content: space-between;
-            font-weight: bold; font-size: 1rem; color: #111; margin-bottom: 15px;
-        }
-        .btn-checkout-main {
-            display: block; width: 100%; text-align: center; background: #ff9900;
-            color: white; padding: 12px; border: none; font-weight: bold;
-            text-transform: uppercase; font-size: 0.85rem; cursor: pointer; border-radius: 2px;
-        }
+        .cart-drawer-footer { padding: 20px; border-top: 1px solid #eee; background: #fafafa; }
+        .cart-summary-total-row { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 15px; }
+        .btn-checkout-main { display: block; width: 100%; text-align: center; background: #ff9900; color: white; padding: 12px; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer; }
 
         /* Real-Time Live Search Modal Windows */
         .search-overlay-curtain {
@@ -311,46 +254,23 @@
             transition: all 0.3s ease;
         }
         .search-overlay-curtain.active { visibility: visible; opacity: 1; }
-        .search-dialog-panel {
-            background: white; padding: 25px; width: 90%; max-width: 480px; border-radius: 4px; text-align: center; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        .search-dialog-panel input {
-            width: 100%; padding: 12px; border: 1px solid #ccc; outline: none; font-size: 0.95rem; margin-bottom: 12px; border-radius: 4px;
-        }
-        .close-curtain-cross { position: absolute; top: 10px; right: 14px; font-size: 1.4rem; cursor: pointer; color: #555; }
+        .search-dialog-panel { background: white; padding: 25px; width: 90%; max-width: 480px; border-radius: 4px; text-align: center; position: relative; }
+        .search-dialog-panel input { width: 100%; padding: 12px; border: 1px solid #ccc; outline: none; font-size: 0.95rem; margin-bottom: 12px; }
+        .close-curtain-cross { position: absolute; top: 10px; right: 14px; font-size: 1.4rem; cursor: pointer; }
 
         /* Trust Ribbon Base Footer Panels */
-        .trust-metrics-footer-strip {
-            background-color: #0b5a53; color: white; display: flex; justify-content: space-around; padding: 25px 40px; text-align: center; flex-wrap: wrap; gap: 15px;
-        }
-        .trust-metrics-footer-strip h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; }
-        .trust-metrics-footer-strip p { font-size: 0.75rem; color: #b3c2bc; }
-
-        /* Corporate Footer Block Structure */
-        footer { background-color: #ffffff; padding: 50px 60px 20px; font-size: 0.82rem; border-top: 1px solid #f0edf7; }
-        .footer-grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 35px; }
-        .footer-column h4 { font-size: 0.85rem; color: #111; margin-bottom: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .footer-column ul { list-style: none; }
-        .footer-column ul li { margin-bottom: 10px; }
-        .footer-column ul li a { color: #555; text-decoration: none; }
-        .footer-corporate-text p { color: #666; line-height: 1.5; margin-top: 12px; }
-        .newsletter-input-group { display: flex; margin-top: 12px; position: relative; }
-        .newsletter-input-group input { width: 100%; padding: 10px; border: 1px solid #ddd; outline: none; }
-        .newsletter-input-group button { position: absolute; right: 4px; top: 4px; background: #0b5a53; color: white; border: none; padding: 6px 12px; cursor: pointer; }
-        .payment-channel-icons { display: flex; gap: 8px; margin-top: 18px; color: #666; font-size: 0.75rem; }
-        .legal-copyright-row { display: flex; justify-content: space-between; border-top: 1px solid #f0edf7; margin-top: 35px; padding-top: 20px; color: #777; font-size: 0.78rem; flex-wrap: wrap; gap: 10px; }
+        .trust-metrics-footer-strip { background-color: #0b5a53; color: white; display: flex; justify-content: space-around; padding: 25px 40px; text-align: center; flex-wrap: wrap; gap: 15px; }
+        footer { background-color: #ffffff; padding: 40px; font-size: 0.82rem; border-top: 1px solid #f0edf7; text-align: center; color: #666; }
     </style>
 </head>
 <body>
 
-    <!-- Announcement Utility Bar -->
     <div class="top-announcement-bar">
         <div class="top-bar-unit">🚚 FREE SHIPPING on orders above ₹999</div>
         <div class="top-bar-unit">💳 COD Available Across India</div>
         <div class="top-bar-unit">🔄 Easy Returns & Exchanges</div>
     </div>
 
-    <!-- Navigation Header -->
     <header>
         <div class="brand-logo-container">
             <a href="#" class="main-logo-text">BEST CHOICE<span> HUB</span></a>
@@ -358,31 +278,21 @@
         <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Best Sellers</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#product-anchor">Shop Collection</a></li>
             </ul>
         </nav>
         <div class="header-action-icons">
             <span class="action-icon-btn" onclick="openSearchWindow()">🔍</span>
-            <span class="action-icon-btn">👤</span>
-            <!-- Added onClick trigger to slide-open cart panel view -->
             <span class="action-icon-btn" onclick="toggleCartDrawer(true)">🛒 <div id="global-cart-counter">0</div></span>
         </div>
     </header>
 
-    <!-- Side Slide Out Interactive Shopping Cart Drawer Interface -->
     <div class="cart-sidebar-drawer" id="shoppingCartDrawer">
         <div class="cart-drawer-header">
             <h3>Shopping Cart (<span id="cart-item-count-text">0</span>)</h3>
             <span class="close-drawer-btn" onclick="toggleCartDrawer(false)">×</span>
         </div>
         <div class="cart-drawer-body" id="cartDrawerItemsContainer">
-            <!-- Dynamic JavaScript nodes rendering engine will render rows here live -->
             <div class="empty-cart-message">Your cart is currently empty.</div>
         </div>
         <div class="cart-drawer-footer">
@@ -390,279 +300,242 @@
                 <span>Subtotal:</span>
                 <span id="cartTotalSumAmount">₹0</span>
             </div>
-            <button class="btn-checkout-main" onclick="alert('Proceeding to integrated secure merchant checkout panel!')">Proceed to Checkout</button>
+            <button class="btn-checkout-main" onclick="checkoutAllCartItems()">Checkout All Products 🛍️</button>
         </div>
     </div>
 
-    <!-- Hero Showcase Section -->
     <div class="hero-banner-section">
         <div class="hero-text-block">
-            <span class="hero-mini-tag">NEW ARRIVALS</span>
-            <h1>Elegance Woven in Tradition</h1>
-            <p>Discover timeless beauty in our premium saree collection crafted meticulously for every special lifecycle celebration.</p>
-            <a href="#product-anchor" class="hero-primary-cta">SHOP NOW ➔</a>
+            <span class="hero-mini-tag">MEGA PREMIUM STORE</span>
+            <h1>Explore Endless Saree Collections</h1>
+            <p>Directly linked with top trending fashion affiliate catalogs. Premium quality assured.</p>
+            <a href="#product-anchor" class="hero-primary-cta">START BROWSING ➔</a>
         </div>
         <div class="hero-display-graphic"></div>
     </div>
 
-    <!-- Mini Value Ribbon Panel -->
-    <div class="value-propositions-ribbon">
-        <div class="prop-item-box"><div class="prop-glyph-icon">🖋️</div><div><h4>Premium Quality</h4><p>Finest Handloom Fabrics</p></div></div>
-        <div class="prop-item-box"><div class="prop-glyph-icon">🛡️</div><div><h4>Secure Payment</h4><p>100% Safe Payments</p></div></div>
-        <div class="prop-item-box"><div class="prop-glyph-icon">📦</div><div><h4>Easy Returns</h4><p>Hassle Free Exchanges</p></div></div>
-        <div class="prop-item-box"><div class="prop-glyph-icon">🎧</div><div><h4>Customer Support</h4><p>Interactive Helpdesk</p></div></div>
-    </div>
-
-    <!-- Explore Our Collection Section -->
-    <div class="generic-section-title">
-        <h2>Explore Our Collection</h2>
-    </div>
-    <div class="round-categories-panel">
-        <div class="category-circular-card">
-            <div class="avatar-circle-frame" style="background-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=150&q=80');"></div>
-            <h3>Sarees</h3>
-        </div>
-        <div class="category-circular-card">
-            <div class="avatar-circle-frame" style="background-image: url('https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=150&q=80');"></div>
-            <h3>Kurtis</h3>
-        </div>
-        <div class="category-circular-card">
-            <div class="avatar-circle-frame" style="background-image: url('https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=150&q=80');"></div>
-            <h3>Lehengas</h3>
-        </div>
-        <div class="category-circular-card">
-            <div class="avatar-circle-frame" style="background-image: url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=150&q=80');"></div>
-            <h3>Dupatta</h3>
-        </div>
-        <div class="category-circular-card">
-            <div class="avatar-circle-frame" style="background-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=150&q=80');"></div>
-            <h3>Gowns</h3>
-        </div>
-    </div>
-
-    <!-- Handpicked For You Retail Center Area -->
     <div class="generic-section-title" id="product-anchor">
-        <h2>Handpicked For You</h2>
+        <h2>Our Exclusive Store Products</h2>
     </div>
 
-    <div class="showcase-products-matrix" id="catalog-products-list">
-        <!-- Product 1 -->
-        <div class="retail-product-card" data-title-keyword="floral printed soft silk saree">
-            <div class="floating-tag-new">New</div>
-            <div class="floating-wishlist-heart">♡</div>
-            <div class="product-thumbnail-area" id="p1-img" style="background-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="retail-product-meta">
-                <div class="product-item-title" id="p1-title">Floral Printed Soft Silk Saree</div>
-                <div class="product-price-tier">₹1,299 <span>₹1,999</span><span class="discount-tag">(35% OFF)</span></div>
-                <div class="product-action-row">
-                    <button class="action-button btn-cart-secondary" onclick="executeCartSystemAddition('p1', 'Floral Printed Soft Silk Saree', 1299, 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=150&q=80')">Add To Cart 🛒</button>
-                    <button class="action-button btn-buy-primary" onclick="initiateDirectBuyNow('Floral Printed Soft Silk Saree', 1299, 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=150&q=80')">Buy Now 🛍️</button>
-                </div>
-            </div>
-        </div>
+    <div class="showcase-products-matrix" id="liveCatalogProductsGrid"></div>
 
-        <!-- Product 2 -->
-        <div class="retail-product-card" data-title-keyword="digital print chiffon saree">
-            <div class="floating-tag-new">New</div>
-            <div class="floating-wishlist-heart">♡</div>
-            <div class="product-thumbnail-area" id="p2-img" style="background-image: url('https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="retail-product-meta">
-                <div class="product-item-title" id="p2-title">Digital Print Chiffon Saree</div>
-                <div class="product-price-tier">₹1,199 <span>₹1,799</span><span class="discount-tag">(33% OFF)</span></div>
-                <div class="product-action-row">
-                    <button class="action-button btn-cart-secondary" onclick="executeCartSystemAddition('p2', 'Digital Print Chiffon Saree', 1199, 'https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=150&q=80')">Add To Cart 🛒</button>
-                    <button class="action-button btn-buy-primary" onclick="initiateDirectBuyNow('Digital Print Chiffon Saree', 1199, 'https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=150&q=80')">Buy Now 🛍️</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="retail-product-card" data-title-keyword="embroidered organza saree">
-            <div class="floating-tag-new">New</div>
-            <div class="floating-wishlist-heart">♡</div>
-            <div class="product-thumbnail-area" id="p3-img" style="background-image: url('https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="retail-product-meta">
-                <div class="product-item-title" id="p3-title">Embroidered Organza Saree</div>
-                <div class="product-price-tier">₹1,499 <span>₹2,299</span><span class="discount-tag">(35% OFF)</span></div>
-                <div class="product-action-row">
-                    <button class="action-button btn-cart-secondary" onclick="executeCartSystemAddition('p3', 'Embroidered Organza Saree', 1499, 'https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=150&amp;q=80')">Add To Cart 🛒</button>
-                    <button class="action-button btn-buy-primary" onclick="initiateDirectBuyNow('Embroidered Organza Saree', 1499, 'https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=150&amp;q=80')">Buy Now 🛍️</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="retail-product-card" data-title-keyword="designer banarasi silk saree">
-            <div class="floating-tag-new">New</div>
-            <div class="floating-wishlist-heart">♡</div>
-            <div class="product-thumbnail-area" id="p4-img" style="background-image: url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="retail-product-meta">
-                <div class="product-item-title" id="p4-title">Designer Banarasi Silk Saree</div>
-                <div class="product-price-tier">₹2,299 <span>₹3,499</span><span class="discount-tag">(34% OFF)</span></div>
-                <div class="product-action-row">
-                    <button class="action-button btn-cart-secondary" onclick="executeCartSystemAddition('p4', 'Designer Banarasi Silk Saree', 2299, 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=150&q=80')">Add To Cart 🛒</button>
-                    <button class="action-button btn-buy-primary" onclick="initiateDirectBuyNow('Designer Banarasi Silk Saree', 2299, 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=150&q=80')">Buy Now 🛍️</button>
-                </div>
-            </div>
-        </div>
+    <div class="center-action-wrapper" id="loadMoreContainer">
+        <button class="btn-load-more-collections" onclick="showMoreProductsFromDatabase()">LOAD MORE PRODUCTS ➔</button>
     </div>
 
-    <!-- Trust Metrics Base Ribbon Panel -->
     <div class="trust-metrics-footer-strip">
-        <div><h4>🚚 Free Shipping</h4><p>On orders above ₹999</p></div>
-        <div><h4>🏅 Best Quality</h4><p>100% Premium Products</p></div>
-        <div><h4>🔥 Best Offers</h4><p>Exciting Seasonal Price Reductions</p></div>
-        <div><h4>🔒 Secure Payments</h4><p>Encrypted Processing Gateway</p></div>
+        <div><h4>🚚 Fast Shipping</h4><p>Across India</p></div>
+        <div><h4>🏅 100% Trusted</h4><p>Direct Affiliate Routing</p></div>
+        <div><h4>🔒 Safe Platform</h4><p>Secure App Checkout</p></div>
     </div>
 
-    <!-- Corporate Footer -->
     <footer>
-        <div class="footer-grid-layout">
-            <div class="footer-column footer-corporate-text">
-                <div style="font-weight:800; font-size:1.2rem; color:#111; margin-bottom:12px;">BEST CHOICE HUB</div>
-                <p>Your premium marketplace destination for exquisite luxury ethnic wear fashion collections.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Privacy Framework</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Newsletter</h4>
-                <div class="newsletter-input-group">
-                    <input type="email" placeholder="Your email ID">
-                    <button>➔</button>
-                </div>
-            </div>
-        </div>
-        <div class="legal-copyright-row">
-            <div>© 2026 Best Choice Hub. All Rights Reserved.</div>
-        </div>
+        <p>© 2026 Best Choice Hub. All Rights Reserved. Designed Professionally.</p>
     </footer>
 
-    <!-- Search Overlay Box Modal Container -->
     <div class="search-overlay-curtain" id="globalSearchCurtain">
         <div class="search-dialog-panel">
             <span class="close-curtain-cross" onclick="closeSearchWindow()">×</span>
-            <h3 style="margin-bottom:12px; font-family:'Georgia', serif; font-size:1.3rem;">Search Our Catalog</h3>
-            <input type="text" id="catalogSearchTermInput" placeholder="Search sarees by fabric name (Silk, Organza...)" onkeyup="filterCatalogProductsLive()">
+            <h3 style="margin-bottom:12px;">Search Our Big Store</h3>
+            <input type="text" id="catalogSearchTermInput" placeholder="Type fabric type (Silk, Georgette, Chiffon...)" onkeyup="filterCatalogProductsLive()">
         </div>
     </div>
 
-    <!-- Advanced Functional Core Script Engine -->
     <script>
-        // Array memory object tracking interactive data structures inside cart state
+        // =========================================================================
+        // 😍 DASHBOARD: JITNE CHAHEIN UTNE PRODUCTS YAHAN ADD KARTE JAYEIN!
+        // =========================================================================
+        // Aap bas niche wale block ko copy karke comma (,) dekar naye products jodte jayein.
+        const MY_PRODUCTS_DATASTORE = [
+            {
+                id: "prod_1",
+                title: "Premium Floral Printed Soft Silk Saree",
+                sellingPrice: 1299,
+                originalPrice: 1999,
+                discountText: "35% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_1"
+            },
+            {
+                id: "prod_2",
+                title: "Luxury Digital Print Chiffon Saree",
+                sellingPrice: 1199,
+                originalPrice: 1799,
+                discountText: "33% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_2"
+            },
+            {
+                id: "prod_3",
+                title: "Designer Embroidered Organza Saree",
+                sellingPrice: 1499,
+                originalPrice: 2299,
+                discountText: "35% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_3"
+            },
+            {
+                id: "prod_4",
+                title: "Traditional Banarasi Silk Saree",
+                sellingPrice: 2299,
+                originalPrice: 3499,
+                discountText: "34% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_4"
+            },
+            {
+                id: "prod_5",
+                title: "Fancy Georgette Partywear Saree",
+                sellingPrice: 999,
+                originalPrice: 1599,
+                discountText: "37% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_5"
+            },
+            {
+                id: "prod_6",
+                title: "Pure Cotton Casual Dailywear Saree",
+                sellingPrice: 799,
+                originalPrice: 1299,
+                discountText: "38% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1583391265517-35bbadd01209?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_6"
+            },
+            {
+                id: "prod_7",
+                title: "Royal Kanjeevaram Saree Velvet Border",
+                sellingPrice: 2999,
+                originalPrice: 4999,
+                discountText: "40% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_7"
+            },
+            {
+                id: "prod_8",
+                title: "Stylish Net Lace Diamond Saree",
+                sellingPrice: 1699,
+                originalPrice: 2599,
+                discountText: "34% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_8"
+            }
+            // 💡 Naya product jodna ho toh bas upar wale block ke baad comma (,) lagakar aur data likh dein!
+        ];
+
+        // System Variables For Smart Multi-loading
+        let visibleProductsLimit = 4; // Ek baar me kitne product pehle dikhane hain
         let runtimeCartProductsArray = [];
 
-        // 1. Drawer open/close UI visibility mechanics
-        function toggleCartDrawer(shouldOpen) {
-            const drawerNode = document.getElementById('shoppingCartDrawer');
-            if(shouldOpen) {
-                drawerNode.classList.add('open');
+        // Engine: Dynamic Products Grid Matrix Renderer
+        function renderProductsGridMatrix() {
+            const gridContainer = document.getElementById('liveCatalogProductsGrid');
+            gridContainer.innerHTML = '';
+            
+            // Loop targeting limited visible range array size
+            let itemsToDisplay = MY_PRODUCTS_DATASTORE.slice(0, visibleProductsLimit);
+
+            itemsToDisplay.forEach(product => {
+                gridContainer.innerHTML += `
+                    <div class="retail-product-card" data-title-keyword="${product.title.toLowerCase()}">
+                        <div class="floating-tag-new">New</div>
+                        <div class="floating-wishlist-heart">♡</div>
+                        <div class="product-thumbnail-area" style="background-image: url('${product.imageUrl}');"></div>
+                        <div class="retail-product-meta">
+                            <div class="product-item-title">${product.title}</div>
+                            <div class="product-price-tier">₹${product.sellingPrice.toLocaleString('en-IN')} <span>₹${product.originalPrice.toLocaleString('en-IN')}</span><span class="discount-tag">(${product.discountText})</span></div>
+                            <div class="product-action-row">
+                                <button class="action-button btn-cart-secondary" onclick="addItemsToCartState('${product.id}')">Add To Cart 🛒</button>
+                                <button class="action-button btn-buy-primary" onclick="initiateDirectBuyNow('${product.id}')">Buy Now 🛍️</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // If all products are already shown on screen, hide Load More Button smoothly
+            if (visibleProductsLimit >= MY_PRODUCTS_DATASTORE.length) {
+                document.getElementById('loadMoreContainer').style.display = 'none';
             } else {
-                drawerNode.classList.remove('open');
+                document.getElementById('loadMoreContainer').style.display = 'block';
             }
         }
 
-        // 2. Add item logic parser processing elements dynamically
-        function executeCartSystemAddition(productId, title, pricingUnit, graphicUrl) {
-            // Check if item already exists inside memory block matching schema ID
-            let existingProductIndex = runtimeCartProductsArray.findIndex(item => item.id === productId);
+        // Functional Action: Load Next Group Pack Sequence
+        function showMoreProductsFromDatabase() {
+            visibleProductsLimit += 4; // Agli baar me aur 4 items khulenge
+            renderProductsGridMatrix();
+        }
 
-            if(existingProductIndex > -1) {
-                runtimeCartProductsArray[existingProductIndex].quantity += 1;
+        // Add to Cart Logic Modules
+        function addItemsToCartState(productId) {
+            let matchedProductObj = MY_PRODUCTS_DATASTORE.find(p => p.id === productId);
+            let existingCartIndex = runtimeCartProductsArray.findIndex(item => item.id === productId);
+
+            if(existingCartIndex > -1) {
+                runtimeCartProductsArray[existingCartIndex].quantity += 1;
             } else {
                 runtimeCartProductsArray.push({
                     id: productId,
-                    name: title,
-                    price: pricingUnit,
-                    img: graphicUrl,
+                    name: matchedProductObj.title,
+                    price: matchedProductObj.sellingPrice,
+                    img: matchedProductObj.imageUrl,
+                    affiliateUrl: matchedProductObj.myntraAffiliateLink,
                     quantity: 1
                 });
             }
-            
             recomputeAndRenderCartDOMState();
-            toggleCartDrawer(true); // Open panel drawer automatically on product addition
+            toggleCartDrawer(true);
         }
 
-        // 3. Re-calculate core counters, loops and update DOM templates
         function recomputeAndRenderCartDOMState() {
             const containerNode = document.getElementById('cartDrawerItemsContainer');
-            let incrementalCounter = 0;
-            let netBillingTotalSum = 0;
+            let totalCount = 0, totalBill = 0;
 
             if(runtimeCartProductsArray.length === 0) {
                 containerNode.innerHTML = '<div class="empty-cart-message">Your cart is currently empty.</div>';
             } else {
-                containerNode.innerHTML = ''; // Wipe trace configurations
-                runtimeCartProductsArray.forEach((product, pointerIndex) => {
-                    incrementalCounter += product.quantity;
-                    netBillingTotalSum += (product.price * product.quantity);
+                containerNode.innerHTML = '';
+                runtimeCartProductsArray.forEach((product, pointerIdx) => {
+                    totalCount += product.quantity;
+                    totalBill += (product.price * product.quantity);
 
-                    // Append explicit programmatic row string node structures
                     containerNode.innerHTML += `
                         <div class="cart-item-row">
                             <div class="cart-item-img" style="background-image: url('${product.img}')"></div>
                             <div class="cart-item-details">
                                 <div class="cart-item-title">${product.name}</div>
-                                <div class="cart-item-price">₹${product.price.toLocaleString('en-IN')}</div>
-                                <div class="cart-item-qty-controls">
-                                    <button class="qty-adjust-btn" onclick="alterItemQuantityCounter(${pointerIndex}, -1)">-</button>
-                                    <span class="qty-display-num">${product.quantity}</span>
-                                    <button class="qty-adjust-btn" onclick="alterItemQuantityCounter(${pointerIndex}, 1)">+</button>
-                                </div>
+                                <div class="cart-item-price">₹${product.price.toLocaleString('en-IN')} x ${product.quantity}</div>
                             </div>
-                            <span class="remove-item-cross" onclick="purgeCartArrayRowElement(${pointerIndex})">Remove</span>
+                            <span class="remove-item-cross" style="cursor:pointer;" onclick="removeItem(${pointerIdx})">×</span>
                         </div>
                     `;
                 });
             }
-
-            // Sync structural nodes values across header icons interfaces globally
-            document.getElementById('global-cart-counter').innerText = incrementalCounter;
-            document.getElementById('cart-item-count-text').innerText = incrementalCounter;
-            document.getElementById('cartTotalSumAmount').innerText = '₹' + netBillingTotalSum.toLocaleString('en-IN');
+            document.getElementById('global-cart-counter').innerText = totalCount;
+            document.getElementById('cart-item-count-text').innerText = totalCount;
+            document.getElementById('cartTotalSumAmount').innerText = '₹' + totalBill.toLocaleString('en-IN');
         }
 
-        // 4. Quantity Adjust Button mechanics 
-        function alterItemQuantityCounter(arrayIndexTarget, differentialValue) {
-            runtimeCartProductsArray[arrayIndexTarget].quantity += differentialValue;
-            if(runtimeCartProductsArray[arrayIndexTarget].quantity <= 0) {
-                purgeCartArrayRowElement(arrayIndexTarget);
-            } else {
-                recomputeAndRenderCartDOMState();
-            }
-        }
-
-        // 5. Purge product sequence tracking completely out of state context arrays
-        function purgeCartArrayRowElement(arrayIndexTarget) {
-            runtimeCartProductsArray.splice(arrayIndexTarget, 1);
+        function removeItem(idx) {
+            runtimeCartProductsArray.splice(idx, 1);
             recomputeAndRenderCartDOMState();
         }
 
-        // Direct Buy Now functionality
-        function initiateDirectBuyNow(title, price, img) {
-            executeCartSystemAddition('direct', title, price, img);
-            toggleCartDrawer(true);
+        function initiateDirectBuyNow(productId) {
+            let itemObj = MY_PRODUCTS_DATASTORE.find(p => p.id === productId);
+            window.open(itemObj.myntraAffiliateLink, "_blank");
         }
 
-        // Search panel modals toggles functions definitions
-        function openSearchWindow() {
-            document.getElementById('globalSearchCurtain').classList.add('active');
-            document.getElementById('catalogSearchTermInput').focus();
+        function checkoutAllCartItems() {
+            if(runtimeCartProductsArray.length === 0) return alert("Cart empty!");
+            runtimeCartProductsArray.forEach(item => window.open(item.affiliateUrl, "_blank"));
         }
-        function closeSearchWindow() {
-            document.getElementById('globalSearchCurtain').classList.remove('active');
-        }
+
+        function toggleCartDrawer(x) { document.getElementById('shoppingCartDrawer').classList.toggle('open', x); }
+        function openSearchWindow() { document.getElementById('globalSearchCurtain').classList.add('active'); document.getElementById('catalogSearchTermInput').focus(); }
+        function closeSearchWindow() { document.getElementById('globalSearchCurtain').classList.remove('active'); }
+        
         function filterCatalogProductsLive() {
             let val = document.getElementById('catalogSearchTermInput').value.toLowerCase();
             let items = document.getElementsByClassName('retail-product-card');
@@ -671,6 +544,8 @@
                 items[i].style.display = attr.includes(val) ? "" : "none";
             }
         }
+
+        window.onload = renderProductsGridMatrix;
     </script>
 </body>
 </html>
