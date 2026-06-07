@@ -456,17 +456,17 @@
                 discountText: "34% OFF",
                 imageUrl: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80",
                 myntraAffiliateLink: "https://earnkaro.com/yahan_link_4"
-                   {
-            id: "prod_5",
-            title: "Embroidered Organza Saree",
-            sellingPrice: 1499,
-            originalPrice: 2299,
-            discountText: "35% OFF",
-            imageUrl: "https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=400&q=80",
-            myntraAffiliateLink: "https://earnkaro.com/yahan_link_5
-        },
- 
-        
+            },
+            {
+                id: "prod_5",
+                title: "Embroidered Organza Saree",
+                sellingPrice: 1499,
+                originalPrice: 2299,
+                discountText: "35% OFF",
+                imageUrl: "https://images.unsplash.com/photo-1610030470298-4057f494a976?auto=format&fit=crop&w=400&q=80",
+                myntraAffiliateLink: "https://earnkaro.com/yahan_link_5"
+            }
+        ];
 
         let visibleProductsLimit = 4;
         let runtimeCartProductsArray = [];
@@ -512,7 +512,6 @@
             const drawerNode = document.getElementById('shoppingCartDrawer');
             if(shouldOpen) {
                 drawerNode.classList.add('open');
-                // Fake state push taaki back dabane pe page band na ho
                 if(history.state !== 'cart-open') {
                     history.pushState('cart-open', null, window.location.href);
                 }
@@ -521,6 +520,7 @@
             }
         }
 
+        // Search features
         function openSearchWindow() {
             document.getElementById('globalSearchCurtain').classList.add('active');
             document.getElementById('catalogSearchTermInput').focus();
@@ -533,11 +533,8 @@
             document.getElementById('globalSearchCurtain').classList.remove('active');
         }
 
-        // Jab user mobile ka back button dabayega, ye function chalega
         window.onpopstate = function(event) {
-            // Agar cart khula hai toh band kar do
             document.getElementById('shoppingCartDrawer').classList.remove('open');
-            // Agar search khula hai toh band kar do
             document.getElementById('globalSearchCurtain').classList.remove('active');
         };
 
